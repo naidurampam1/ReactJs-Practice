@@ -1,0 +1,214 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Mobile-first container styling */
+.bg-container {
+  width: 90%; /* Flexible width for small screens */
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 2px solid gray;
+  border-left-color: goldenrod;
+  border-bottom-color: goldenrod;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient background before book details */
+.bg-gradient {
+  background-image: linear-gradient(to left, #4ce7dace, white);
+}
+/* Smaller heading size for mobile */
+.title {
+  font-size: 1.5em;
+  color: #007acc;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+/* Smaller subheading size for mobile */
+.section h2 {
+  font-size: 1.2em;
+  color: #005c99;
+  margin-bottom: 10px;
+}
+
+.section p,
+.section ul,
+.section ol {
+  margin: 10px 0;
+  padding-left: 15px; /* Adjust padding for smaller screens */
+  color: #444;
+}
+
+.section ul,
+.section ol {
+  list-style-type: disc;
+}
+
+.section ul li,
+.section ol li {
+  margin: 5px 0;
+}
+
+.section ul li ul {
+  list-style-type: circle;
+  padding-left: 15px;
+}
+
+.highlight {
+  color: #007acc;
+  font-weight: bold;
+}
+
+.section em {
+  color: #333;
+  font-style: italic;
+}
+
+h1 {
+  color: #343a40;
+  text-align: center;
+}
+/* Smaller subtitle font size for mobile */
+.sub-title {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  flex-direction: column; /* Stack search bar and button vertically on mobile */
+  margin-top: 20px;
+}
+
+.input-book {
+  width: 100%; /* Full width for input on mobile */
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px; /* Add space between input and button */
+}
+
+button {
+  width: 100%; /* Full width for button on mobile */
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: goldenrod;
+}
+
+.error-message {
+  color: red !important;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.book-list {
+  margin-top: 20px;
+}
+
+.book-item {
+  border-bottom: 1px solid #e9ecef;
+  padding: 10px 0;
+}
+
+.book-item h2 {
+  font-size: 1.2em; /* Adjust for mobile */
+  color: #495057;
+}
+
+.book-item p {
+  margin: 5px 0;
+  color: #6c757d;
+}
+
+.span-color {
+  color: red !important;
+}
+
+.book-item div {
+  display: flex;
+  flex-direction: column; /* Align content vertically on mobile */
+}
+
+.book-item span {
+  margin-right: 5px;
+  color: black;
+}
+
+/* Laptop and larger screen styles */
+@media (min-width: 768px) {
+  .bg-container {
+    width: 700px; /* Adjust container width for larger screens */
+  }
+
+  .search-container {
+    flex-direction: row; /* Side-by-side layout for input and button */
+  }
+
+  .input-book {
+    margin-bottom: 0; /* Remove bottom margin for input */
+  }
+
+  button {
+    width: auto; /* Button width based on content */
+    margin-left: 10px; /* Space between input and button */
+  }
+
+  .title {
+    font-size: 32px; /* Larger heading for laptops */
+  }
+
+  .section h2 {
+    font-size: 24px; /* Increase subheading size */
+  }
+
+  .sub-title {
+    font-size: 18px; /* Larger subtitle font size */
+  }
+
+  .book-item div {
+    flex-direction: row; /* Align content horizontally */
+  }
+}
+.loading-spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
